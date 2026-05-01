@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MelOS</title>
+
+<style>
+body {
+    margin:0;
+    font-family:Arial;
+    background:#020617;
+    color:white;
+}
+
+/* HEADER */
+header {
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    border-bottom:1px solid #1e293b;
+}
+
+header button {
+    background:#38bdf8;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero {
+    text-align:center;
+    padding:100px 20px;
+}
+
+.hero h1 {
+    font-size:40px;
+}
+
+.hero p {
+    color:#94a3b8;
+}
+
+/* BUTTON */
+.btn {
+    background:#38bdf8;
+    padding:12px 20px;
+    border-radius:10px;
+    margin-top:20px;
+    display:inline-block;
+    cursor:pointer;
+}
+
+/* FEATURES */
+.section {
+    padding:60px 20px;
+    text-align:center;
+}
+
+.cards {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card {
+    background:#1e293b;
+    margin:10px;
+    padding:20px;
+    border-radius:15px;
+    width:250px;
+}
+
+/* DOWNLOAD */
+.download {
+    padding:60px 20px;
+    text-align:center;
+}
+
+.download button {
+    width:200px;
+    margin:10px;
+}
+
+/* FOOTER */
+footer {
+    padding:20px;
+    text-align:center;
+    border-top:1px solid #1e293b;
+    color:#94a3b8;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h2>🚀 MelOS</h2>
+    <div>
+        <button onclick="scrollToSection('features')">Features</button>
+        <button onclick="scrollToSection('download')">Download</button>
+    </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Dein eigenes System</h1>
+    <p>MelOS kombiniert Apps, Server und Lizenzsystem</p>
+
+    <div class="btn" onclick="scrollToSection('download')">
+        Jetzt starten
+    </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section" id="features">
+    <h2>✨ Features</h2>
+
+    <div class="cards">
+        <div class="card">🔐 Lizenzsystem</div>
+        <div class="card">📱 Mobile Apps</div>
+        <div class="card">🌐 Server Backend</div>
+        <div class="card">⚡ Aktivierung</div>
+        <div class="card">🛡️ Sicherheit</div>
+        <div class="card">🚀 Modern</div>
+    </div>
+</div>
+
+<!-- DOWNLOAD -->
+<div class="download" id="download">
+    <h2>📥 Download</h2>
+
+    <a href="melos_admin.apk" download>
+        <button>🔐 Admin App</button>
+    </a>
+
+    <a href="melos_user.apk" download>
+        <button>📱 User App</button>
+    </a>
+
+    <p style="margin-top:20px;color:#facc15;">
+        ⚠️ Android: Unbekannte Apps erlauben
+    </p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 MelOS System
+</footer>
+
+<script>
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({
+        behavior:"smooth"
+    });
+}
+</script>
+
+</body>
+</html>
